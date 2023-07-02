@@ -30,6 +30,7 @@
 		<fastjson.version>1.2.75</fastjson.version>
 		<hutool.version>5.5.8</hutool.version>
 		<lombok.version>1.18.12</lombok.version>
+		<testng.version>7.6.1</testng.version>
 	</properties>
 
 	<dependencyManagement>
@@ -42,23 +43,42 @@
 			</dependency>
 
 			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-test</artifactId>
+				<version>${mybatis-starter.version}</version>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.testng</groupId>
+				<artifactId>testng</artifactId>
+				<version>${testng.version}</version>
+				<scope>test</scope>
+
+			</dependency>
+
+			<!-- mybatis 操作数据库的工具-->
+			<dependency>
 				<groupId>org.mybatis.spring.boot</groupId>
 				<artifactId>mybatis-spring-boot-starter</artifactId>
 				<version>${mybatis-starter.version}</version>
 			</dependency>
 
+			<!-- 可以将 Java 对象和 JSON 格式尽享互相转换-->
 			<dependency>
 				<groupId>com.alibaba</groupId>
 				<artifactId>fastjson</artifactId>
 				<version>${fastjson.version}</version>
 			</dependency>
 
+			<!-- JAVA工具包 提供各种方法，可以直接调用-->
 			<dependency>
 				<groupId>cn.hutool</groupId>
 				<artifactId>hutool-all</artifactId>
 				<version>${hutool.version}</version>
 			</dependency>
-
+			<!--Lombok是一种Java™实用工具，可用来帮助开发人员消除Java的冗长代码，
+			尤其是对于简单的Java对象（POJO）。它通过注释实现这一目的-->
 			<dependency>
 				<groupId>org.projectlombok</groupId>
 				<artifactId>lombok</artifactId>
